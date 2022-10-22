@@ -1,37 +1,49 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ByMe</title>
-    # using materialize/sass documents and resources to style
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </head>
-  </head>
-  <body>
-    <header class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <ul>
-            <li>
-              <a href="/" class="left brand-logo">  ByMe</a>
-            </li>
-          </ul>
-          <ul class="right">
-            <li><a href="/about">About</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
-      <div class="right">
-        ByMe Crypto Knowledge & Investment App 2022 ZG
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ByMe</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <header class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+            <a href="/" class="left brand-logo">&nbsp;&nbsp;ByMe</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li><a href="/about">About</a></li>
+          <li><a href="">Create Watchlist</a></li>
+          <li><a href="/symbols">View Symbols</a></li>
+          <li><a href="">Invest</a></li>
+          <li><a href="">Dashboard</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <main class="container">{% block content %} {% endblock %}</main>
+
+  <footer class="page-footer">
+    <div class="right">
+      ByMe Crypto Knowledge & Investment App 2022 ZG
+    </div>
+  </footer>
+
+</body>
+
+</html>
+</body>
+
 </html>
