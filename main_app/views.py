@@ -12,6 +12,10 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
+def symbols_index(request):
+  symbols = Symbol.objects.all()
+  return render(request, 'symbols/index.html', { 'symbols': symbols })
+
 def symbols_detail(request, symbol_id):
   symbols = Symbol.objects.get(id=symbol_id)
   investing_form = InvestingForm()
