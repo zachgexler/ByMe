@@ -1,6 +1,13 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
+
+class Investment(models.Model):
+    name = models.CharField(max_length=50)
+    amount = models.FloatField(max_length=50)
+
+def get_absolute_url(self):
+    return reverse('investments_detail', kwargs={'pk': self.id})
 
 class Symbol(models.Model):
   name = models.CharField(max_length=100)
