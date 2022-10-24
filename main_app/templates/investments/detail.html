@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Investment Details</h1>
+
+
+<div class="card">
+    <a href="{% url 'investment_detail' investment.id %}">
+        <div class="card-content">
+            <span class="card-title">A <span class="{{ investment.amount.lower }}-text">{{ investment.amount }}</span> {{ investment.name }}</span>
+        </div>
+        <div class="card-action">
+            <a href="{% url 'investments_update' investment.id %}">Edit</a>
+            <a href="{% url 'investments_delete' investment.id %}">Delete</a>
+        </div>
+    </a>
+</div>
+
+{% endblock %}
