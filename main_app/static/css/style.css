@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(237, 241, 238);
+    color: rgb(17, 15, 16);
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 1.3em;
+}
+
+p {
+    color: rgb(6, 7, 7);
+}
+
+nav-wrapper {
+    color: rgb(15, 16, 15);
+
+}
+navbar-fixed{
+    color: rgb(2, 2, 2);
+}
+a {
+    color: rgb(1, 1, 1);
+}
