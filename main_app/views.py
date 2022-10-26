@@ -73,7 +73,7 @@ def signup(request):
 class SymbolCreate(LoginRequiredMixin, CreateView):
     model = Symbol
     fields = ('name','symbol','price')
-    success_url = '/symbols/'
+    
 
     def form_valid(self, form):
       form.instance.user = self.request.user
