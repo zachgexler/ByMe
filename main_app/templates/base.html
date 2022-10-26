@@ -15,9 +15,9 @@
 </head>
 
 <body>
-  <header class="navbar-fixed">
+  <header class="navbar-fixed teal">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper teal">
         <ul>
           <li>
             <a href="/" class="left brand-logo">&nbsp;&nbsp;ByMe</a>
@@ -28,7 +28,7 @@
             <li><a href="{% url 'investments_create' %}">Add an Investment</a></li>
             <li><a href="{% url 'investments_index' %}">View All Investments</a></li>
             <li><a href="{% url 'symbols_create' %}">Add a Symbol</a></li>
-            <li><a href="{% url 'index' %}">View All My Symbols</a></li>
+            <li><a href="{% url 'symbols_index' %}">View All My Symbols</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
             <li><a href="{% url 'signup' %}">Sign Up</a></li>

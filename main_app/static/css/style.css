@@ -1,23 +1,12 @@
 body {
     background-color: rgb(237, 241, 238);
-    background-image: url(https://media.giphy.com/media/mCghKeLLkjgttG9lK9/giphy.gif);
+    background-image: url(https://media.giphy.com/media/MagSgolK3ScWvtHAB4/giphy.gif);
     background-size:cover;
     color: rgb(240, 233, 237);
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 1.3em;
 }
 
-p {
-    color: rgb(233, 241, 241);
-}
-
-nav-wrapper {
-    color: rgb(239, 243, 239);
-
-}
-navbar-fixed{
-    color: rgb(248, 243, 243);
-}
-a {
-    color: rgb(240, 236, 236);
+.li {
+    color: rgb(30, 208, 68);
 }
