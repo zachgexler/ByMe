@@ -2,14 +2,22 @@
 
 <h1>Watch List</h1>
 
-{% for Symbol in Symbols %}
-<div class="card">
-  <a href="/symbols/{{ symbol.id }}">
-  <div class="card-content">
-    <span class="card-title">{{ symbol.name }}</span>
-    <p>Symbol {{ symbol.symbol }}</p>
-    <p>Price: {{ symbol.price }}</p>
-  </div>
-  </a>
-</div>
-{% endfor %} {% endblock %}
+
+{% if user.is_authenticated %}
+
+
+<p>symbols:</p>
+
+{% for symbol in object_list %}
+
+<p>{{ symbol.name }}</p>
+<p>{{ symbol.symbol }}</p>
+<p>{{ symbol.price }}</p>
+
+<h1><a href= "{% url 'symbol_delete' symbol.pk %}">delete</href></h1>
+  <h1><a href= "{% url 'symbol_update' symbol.pk %}">update</href></h1>
+
+{% endfor %}
+{% endif %}
+
+ {% endblock %}

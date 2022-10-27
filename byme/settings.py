@@ -15,10 +15,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
-
 SECRET_KEY = 'django-insecure-oy04lkm(y=2vvs(@j$r)tb5-soxe$y7@+%^w3)4m5$6*5_yda7'
 
 DEBUG = True
@@ -26,8 +22,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'accounts',
     'main_app',
-    'materializecssform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,8 +64,8 @@ WSGI_APPLICATION = 'byme.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'byme',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3' ,
     }
 }
 
@@ -100,9 +96,10 @@ STATIC_URL = 'static/'
 
 LOGIN_REDIRECT_URL = '/symbols/'
 
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'home'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
-django_heroku.settings(locals())
+AUTH_USER_MODEL = 'accounts.CustomUser'
+#import django_heroku
+#django_heroku.settings(locals())

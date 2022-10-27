@@ -1,7 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
-from django.contrib.auth.models import User
+from django.conf import settings
+
 
 INVESTMENTS = (
     ('C', 'Credit'),
@@ -14,21 +15,21 @@ class Investment(models.Model):
     amount = models.FloatField(max_length=50)
 
 
-def get_absolute_url(self):
-    return reverse('investments_detail', kwargs={'pk': self.id})
+    def get_absolute_url(self):
+        return reverse('investments_detail', kwargs={'pk': self.id})
 
 
 class Symbol(models.Model):
   name = models.CharField(max_length=100)
   symbol = models.CharField(max_length=100)
   price = models.FloatField()
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)
 
   def __str__(self):
     return self.name
 
   def get_absolute_url(self):
-    return reverse('symbols_detail', kwargs={'symbol_id': self.id})
+    return reverse('home')
 
 
 class Investing(models.Model):
